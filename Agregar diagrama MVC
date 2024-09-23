@@ -1,0 +1,19 @@
+# Diagrama MVC
+
+```mermaid
+graph TD;
+    A[Modelo] --> B[Estudiante]
+    A --> C[Actividad]
+    A --> D[CredencialDeportiva]
+    
+    B --> |nombre, ID, actividades| E[Vista]
+    C --> |nombre, descripción, requisitos| E
+    D --> |ID, tipoDeporte, fechaEmision| E
+    
+    E --> F[Formulario de Registro]
+    E --> G[Lista de Actividades]
+    E --> H[Tarjeta de Información]
+    
+    I[Controlador] --> J[registrarEstudiante()]
+    I --> K[asignarActividad()]
+    I --> L[mostrarCredencial()]
